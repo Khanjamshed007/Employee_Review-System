@@ -1,0 +1,24 @@
+<!-- CSS file of login part -->
+<link rel="stylesheet" href="/css/login.css">
+
+<div class="main">
+    <!-- Login part -->
+    <div class="login">
+        <div class="img">
+            <img src="/img/ER.png" alt="">
+        </div>
+        <h1 data-text="ER_System"></h1>
+        <p>To Continue,log into ER System</p>
+        <form id="login_form" action="/createSession" method="POST">
+            <label>Enter Your Email</label>
+            <input type="email" name="email" placeholder="Enter Email" autocomplete="on" required>
+            <label>Enter Your Password</label>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+            <button class="login_btn" type="submit">Log In</button>
+        </form>
+        <h4>Don't Have Account</h4>
+        <div class="links">
+            <a href="/signUp">Sign Up in ER-System</a>
+        </div>
+    </div>
+</div>

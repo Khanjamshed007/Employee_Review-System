@@ -1,0 +1,61 @@
+<% if(locals.user && locals.user.role === 'admin') {%>
+<div class="d-flex justify-content-center p-4 -md-0">
+  <form
+    action="/create-employee"
+    class="rounded p-3 col-12 col-md-4 shadow-lg"
+    method="POST"
+  >
+    <h3 class="mb-3 text-center">Add an Employee</h3>
+
+    <!-- Username Input -->
+    <div class="form-outline mb-2">
+      <label for="form-label" for="name">Name</label>
+      <input type="text" name="name" id="name" class="form-control" required />
+    </div>
+    <!-- email Input -->
+    <div class="form-outline mb-2">
+      <label for="form-label" for="name">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        required
+      />
+    </div>
+    <!-- password Input -->
+    <div class="form-outline mb-2">
+      <label for="form-label" for="name">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="form-control"
+        required
+      />
+    </div>
+    <!--confirm password Input -->
+    <div class="form-outline mb-2">
+      <label for="form-label" for="name">Confirm password</label>
+      <input
+        type="password"
+        name="confirm_password"
+        id="confirm_password"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="my-3 d-flex justify-content-center gap-3">
+      <!-- cancel button -->
+      <a
+        href="/admin"
+        class="btn text-light bg-danger btn-block fw-semibold"
+        >Cancel</a
+      >
+
+      <!-- Add button -->
+      <button type="submit" class="btn btn-primary fw-semibold">Add</button>
+    </div>
+</div>
+<%}%>

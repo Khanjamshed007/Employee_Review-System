@@ -1,0 +1,33 @@
+<!-- CSS file of Sign Up that part inlcude in login css -->
+<link rel="stylesheet" href="/css/signup.css">
+<div class="main">
+    <!-- Sign up Part -->
+    <div class="signup">
+        <div class="img">
+            <img src="/img/ER.png" alt="">
+        </div>
+        <h1 data-text="ER_System"></h1>
+        <p>To Continue,Sign up into ER System </p>
+
+        <form id="login_form" action="/create" method="POST">
+            <label>Enter Your Name</label>
+            <input type="text" name="name" placeholder="Enter Name" autocomplete="off" required>
+            <label>Enter Your Email</label>
+            <input type="email" name="email" placeholder="Enter Email" autocomplete="off" required>
+            <label>Enter Your Password</label>
+            <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+            <label>Enter Your confirm Password</label>
+            <input type="password" name="confirm_password" placeholder="Confirm-Password" autocomplete="off" required>
+            <label>Role</label>
+            <select name="role" id="role" required>
+                <option selected value="employee">Employee</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <button class="sign_btn" type="submit">Sign up</button>
+        </form>
+        <div class="login-link">
+            Have an account?<a href="/">Log In</a>
+        </div>
+    </div>
+</div>

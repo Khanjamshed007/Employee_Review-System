@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@300&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+body{
+    background: url('/img/ERROR.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+// main
+.main{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+
+}
+// Styling the login 
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.4);
+    width: 40rem;
+    margin: auto;
+    height: 43rem;
+    margin-top: -2rem;
+
+    h1{
+        color: white;
+        -webkit-text-stroke: 5px #383d52;
+        text-transform: uppercase;
+
+        &::before{
+            content: attr(data-text);
+            display: flex;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            -webkit-text-stroke: 5px #383d52;
+            overflow: hidden;
+            animation: textmate 6s linear infinite;
+        }
+
+    }
+    @keyframes textmate {
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width: 100%;
+        }
+    }
+
+
+    .img {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        h1 {
+            font-family: "Bebas+Neue", sans-serif;
+            margin-left: -8px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        img {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+    p {
+        margin-top: 40px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    // Styling Login Form
+    #login_form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+        input {
+            width: 24rem;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-bottom: 20px;
+
+            &::placeholder {
+                font-size: 15px;
+            }
+        }
+        a {
+            font-size: 18px;
+            color: black;
+        }
+        // Styling the Button of login
+        .login_btn {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            background-color: #003c67;
+            color: white;
+            display: flex;
+            border-radius: 500px;
+            font-size: inherit;
+            min-block-size: 48px;
+            margin-bottom: 1rem;
+            border: none;
+            left: 17.2rem;
+            -webkit-box-align: center;
+            align-items: center;
+            font-weight: 700;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding-block: 8px;
+            padding-inline: 32px;
+            width: 30%;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    h4 {
+        color: white;
+        font-size: 20px;
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        color: gray;
+        width: 24rem;
+        justify-content: center;
+        gap: 1rem;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-weight: 600;
+        padding: 8px;
+
+        &:hover {
+            border-color: #000000;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+        }
+    }
+    .login-link {
+        font-size: 18px;
+        margin-top: 0.5rem;
+        a {
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}

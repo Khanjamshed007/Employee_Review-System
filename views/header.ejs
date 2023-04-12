@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/header.css" />
+<nav class="navbar navbar-expand-md nav-light">
+  <div class="container-fluid">
+    <a class="navbar-brand me-lg-5" href="/">
+      <img src="/img/ER.png" alt="Logo" width="50" height="50" />
+      <span>ER System</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"   
+    >
+      <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+      <% if(locals.user) {%>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+        <li class="nav-item ms-lg-4">
+          <a class="nav-link fw-semibold" aria-current="page" href="/"
+            ><i class="fa-solid fa-house"></i> Home</a
+          >
+        </li>
+        <% if(locals.user.role === 'admin') {%>
+        <li class="nav-item ms-lg-4">
+          <a
+            class="nav-link fw-semibold"
+            aria-current="page"
+            href="/add-employee"
+            ><i class="fas fa-solid fa-plus"></i> Add employee</a
+          >
+        </li>
+        <%} %>
+      </ul>
+
+      <form class="d-flex gap-2 justify-content-end right-0">
+        <div class="btn rounded-pill fw-semibold User">
+          <i class="fas fa-solid fa-user"></i> <%= user.name %>
+        </div>
+        <a class="btn mx-2 rounded-pill fw-semibold User1" href="/signOut">
+          <i class="fa fa-arrow-circle-right"></i>Sign Out</a>
+      </form>
+    </div>
+    <%} %>
+  </div>
+</nav>

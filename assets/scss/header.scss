@@ -1,0 +1,97 @@
+.navbar {
+    box-shadow: 1px 1px 10px;
+    margin-top: -0.5rem;
+    padding-bottom: 0%;
+    background: url("/img/ERROR.jpg");
+
+    .navbar-toggler{
+        border: 1px solid white;
+
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+        }
+    }
+    .collapse {
+        li a {
+            position: relative;
+            color: white;
+            font-size: 18px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: white;
+                height: 2px;
+                width: 0;
+                left: 5px;
+                bottom: 7px;
+                transition: 0.4s;
+            }
+            &:hover::after {
+                width: 95%;
+            }
+        }
+    }
+    .User {
+        border: 2px solid;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+        color: whitesmoke;
+
+        &:hover {
+            transition: 0.2s;
+            transform: scaleX(1.1);
+            background-color: #43bdff;
+        }
+    }
+    .User1 {
+        border: 2px solid;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1%);
+        color: whitesmoke;
+        gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            transition: 0.2s;
+            transform: scaleX(1.1);
+            background-color: rgb(229, 84, 84);
+        }
+    }
+}
+
+.navbar-brand {
+    img {
+        width: 100px;
+        height: 100px;
+        margin-top: -2rem;
+    }
+    span {
+        font-size: 30px;
+        font-weight: 900;
+        color: white;
+    }
+}
+
+.assign{
+    background-color: whitesmoke;
+    border-color: antiquewhite;
+
+    &:hover{
+        background-color: #e7dada82;
+        border-color: #e7dada82;
+    }
+}
+
+// Media Queries
+@media(max-width:768px){
+
+    .navbar .collapse li a:hover::after{
+        width: 22%;
+    }
+}
+    
