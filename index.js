@@ -8,7 +8,6 @@ const db = require('./config/mongoose');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy')
 const flash = require('connect-flash');
-const MongoStore = require('connect-mongo');
 const customeMiddleware = require('./config/middleware')
 const { PORT,SECRET_KEY} = process.env;
 const sassMiddleware = require('node-sass-middleware');
