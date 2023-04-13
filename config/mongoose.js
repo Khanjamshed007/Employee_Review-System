@@ -2,7 +2,7 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
 mongoose.set('strictQuery', true);
-mongoose.connect('mongodb://localhost/ER-System')
+mongoose.connect('mongodb+srv://khanjamshed404:Khan786786@cluster0.y5khj3z.mongodb.net/?retryWrites=true&w=majority')
 
 
 const db=mongoose.connection;
