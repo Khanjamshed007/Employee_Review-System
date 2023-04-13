@@ -10,7 +10,7 @@ const passportLocal = require('./config/passport-local-strategy')
 const flash = require('connect-flash');
 const MongoStore = require('connect-mongo');
 const customeMiddleware = require('./config/middleware')
-const { PORT, MONGODB_URL,SECRET_KEY} = process.env;
+const { PORT,SECRET_KEY} = process.env;
 const sassMiddleware = require('node-sass-middleware');
 
 
@@ -40,10 +40,6 @@ app.use(session({
     cookie: {
         maxAge: (1000 * 60 * 100),
     },
-    store:MongoStore.create({
-        mongoUrl:MONGODB_URL,
-        autoRemove:'disabled',
-    }),
     function(err){
         console.log(err || 'connet-mongodb setup ok')
     }
