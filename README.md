@@ -1,9 +1,6 @@
 # Employee_Review-System
 Employee_Review_System Using MEN Stack(MongoDB,Express,Node Js) It is fully functional with login and sign up page and also responsive
 
-# Live Server
-https://habit-tracker1.onrender.com
-
 # How to run the Website ?
 Either clone the repository and run or use above Link
 
